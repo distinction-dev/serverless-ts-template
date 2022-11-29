@@ -1,0 +1,10 @@
+service: lambda-awsSchedular-typescript
+
+provider:
+  profile: serverless-deploy
+  name: aws
+
+functions:
+  hello:
+    handler: handler.hello
+    
