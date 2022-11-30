@@ -1,4 +1,4 @@
-service: lambda-awsSchedular-typescript
+service: lambda-awsSchedular-typescript 
 
 provider:
   profile: serverless-deploy
@@ -7,4 +7,32 @@ provider:
 functions:
   hello:
     handler: handler.hello
-    
+    events:
+      - eventBridge:
+          useCloudFormation: true
+          schedule: cron(* * * * ? *)
+          input:
+            name:MitanshGor
+            age:10
+          retryPolicy:
+            maximumEventAge: 3600
+            maximumRetryAttempts: 3
+
+plugins:
+  - serverless-offline
+  - serverless-step-functions
+
+
+package:
+  exclude:
+    - coverage/**
+    - scripts/**
+    - serverless.yml
+    - .nyc_output/**
+    - .idea/**
+    - test/**
+    - scripts/**
+    - package-lock.json
+    - .gitlab-ci.yml
+    - README.md
+    - serverless.yml.example
