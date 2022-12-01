@@ -19,9 +19,7 @@ functions:
             maximumRetryAttempts: 3
 
 plugins:
-  - serverless-offline
-  - serverless-step-functions
-
+  - serverless-esbuild
 
 package:
   exclude:
