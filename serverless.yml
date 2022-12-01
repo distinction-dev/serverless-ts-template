@@ -20,6 +20,11 @@ functions:
 
 plugins:
   - serverless-esbuild
+  - serverless-prune-plugin
+
+custom:
+  prune:
+    automatic: true
 
 package:
   exclude:
