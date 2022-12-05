@@ -20,9 +20,8 @@
     "serverless-step-functions": "^3.11.1"
   },
   "devDependencies": {
-    "@serverless/typescript": "^3.0.0",
     "@types/aws-lambda": "^8.10.71",
-    "@types/node": "^14.14.25",
+    "@types/node": "16.11.7",
     "@typescript-eslint/eslint-plugin": "^5.45.0",
     "@typescript-eslint/parser": "^5.45.0",
     "esbuild": "^0.14.11",
