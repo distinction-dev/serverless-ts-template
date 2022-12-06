@@ -1,22 +1,18 @@
-service: lambda-awsSchedular-typescript 
+service: typescript
 
 provider:
   profile: serverless-deploy
   name: aws
+  runtime: nodejs16.x
 
 functions:
   hello:
-    handler: handler.hello
+    handler: src/functions/hello.handler
     events:
-      - eventBridge:
-          useCloudFormation: true
-          schedule: cron(* * * * ? *)
-          input:
-            name:MitanshGor
-            age:10
-          retryPolicy:
-            maximumEventAge: 3600
-            maximumRetryAttempts: 3
+      - http:
+          cors: true
+          path: /hello
+          method: GET
 
 plugins:
   - serverless-esbuild
