@@ -1,5 +1,5 @@
 {
-  "name": "serverless-typescript",
+  "name": "serverless-ts-template",
   "version": "0.0.0-development",
   "description": "Serverless Typescript template",
   "scripts": {
