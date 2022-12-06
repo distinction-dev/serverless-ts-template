@@ -1,7 +1,7 @@
 import { response } from "@lib/api-gateway";
 import { APIGatewayEvent, APIGatewayProxyHandler } from "aws-lambda";
 
-export const hello: APIGatewayProxyHandler = async (
+export const handler: APIGatewayProxyHandler = async (
   event: APIGatewayEvent
 ): Promise<any> => {
   return response(200, {
