@@ -14,7 +14,7 @@
       "@lib/*": ["src/lib/*"]
     }
   },
-  "include": ["src/**/*.ts"],
+  "include": ["src/**/*.ts", "./serverless.ts"],
   "exclude": [
     "node_modules/**/*",
     ".serverless/**/*",
